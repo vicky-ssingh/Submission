@@ -150,8 +150,8 @@
         </button>
     </header>
 
-    <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar" style="width: 75%"></div>
+    <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 100%"></div>
     </div>
 
     <div class="step-indicator" aria-hidden="true">
@@ -167,11 +167,11 @@
             <div class="step-number">3</div>
             <div class="step-label">Contributors</div>
         </div>
-        <div class="step active">
+        <div class="step">
             <div class="step-number">4</div>
             <div class="step-label">Editors</div>
         </div>
-        <div class="step">
+        <div class="step active">
             <div class="step-number">5</div>
             <div class="step-label">Review</div>
         </div>
@@ -202,13 +202,13 @@
             <textarea id="contributors" name="contributors" rows="5"></textarea>
         </div>
 
-        <div id="step4" style="display: block;">
+        <div id="step4" style="display: none;">
             <h2>Notes for Editors</h2>
             <label for="editorNotes">Additional notes for editors</label>
             <textarea id="editorNotes" name="editorNotes" rows="5"></textarea>
         </div>
 
-        <div id="step5" style="display: none;">
+        <div id="step5" style="display: block;">
             <h2>Review and Submit</h2>
             <p>Please review your submission before submitting.</p>
             <button type="submit">Submit Paper</button>
@@ -227,7 +227,7 @@
         const progressBar = document.querySelector('.progress-bar');
         const steps = document.querySelectorAll('.step');
         const darkModeToggle = document.getElementById('darkModeToggle');
-        let currentStep = 4;  // Set current step to 4
+        let currentStep = 5; // Set default step to 5
 
         function updateStep() {
             for (let i = 1; i <= 5; i++) {
@@ -282,3 +282,4 @@
     </script>
 </body>
 </html>
+
