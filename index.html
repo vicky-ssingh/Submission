@@ -150,8 +150,8 @@
         </button>
     </header>
 
-    <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar" style="width: 50%"></div>
+    <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 75%"></div>
     </div>
 
     <div class="step-indicator" aria-hidden="true">
@@ -163,11 +163,11 @@
             <div class="step-number">2</div>
             <div class="step-label">Upload</div>
         </div>
-        <div class="step active">
+        <div class="step">
             <div class="step-number">3</div>
             <div class="step-label">Contributors</div>
         </div>
-        <div class="step">
+        <div class="step active">
             <div class="step-number">4</div>
             <div class="step-label">Editors</div>
         </div>
@@ -196,13 +196,13 @@
             <input type="file" id="paperFile" name="paperFile" accept=".pdf" required>
         </div>
 
-        <div id="step3">
+        <div id="step3" style="display: none;">
             <h2>Contributors</h2>
             <label for="contributors">Add contributors (one per line)</label>
             <textarea id="contributors" name="contributors" rows="5"></textarea>
         </div>
 
-        <div id="step4" style="display: none;">
+        <div id="step4" style="display: block;">
             <h2>Notes for Editors</h2>
             <label for="editorNotes">Additional notes for editors</label>
             <textarea id="editorNotes" name="editorNotes" rows="5"></textarea>
@@ -227,7 +227,7 @@
         const progressBar = document.querySelector('.progress-bar');
         const steps = document.querySelectorAll('.step');
         const darkModeToggle = document.getElementById('darkModeToggle');
-        let currentStep = 3;
+        let currentStep = 4;  // Set current step to 4
 
         function updateStep() {
             for (let i = 1; i <= 5; i++) {
@@ -282,4 +282,3 @@
     </script>
 </body>
 </html>
-
